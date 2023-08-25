@@ -1,3 +1,7 @@
+
+var rodada =1;
+var matriz_jogo = Array(3);
+
 $(document).ready(function(){
     $('#btn_iniciar_jogo').click(function(){
 
@@ -35,6 +39,19 @@ $(document).ready(function(){
     function jogada(id){
         var icone = '';
         var ponto = 0;
+
+        //Verificando de quem é a vez de jogar
+
+        if (rodada % 2 == 1) {
+            icone = 'url("imagens/marcacao_1.png")'
+            ponto = -1;
+        }else{
+            icone = 'url("imagens/marcacao_2.png")'
+            ponto = 1;
+        }
+        rodada++;
+        
+        $('#' + id).css('background-image', icone);
     }
 
 });
