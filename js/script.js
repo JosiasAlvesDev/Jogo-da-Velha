@@ -14,7 +14,27 @@ $(document).ready(function(){
         }
 
 
-        alert($('#entrada_apelido_jogador1').val());
-        alert($('#entrada_apelido_jogador2').val());
-    })
+        //Exibir os Apelidos
+
+        $('#jogador1').html($('#entrada_apelido_jogador1').val());
+        $('#jogador2').html($('#entrada_apelido_jogador2').val());
+
+
+        //Controle das vizualizações das Divs
+        $('#paginaInicial').hide();
+        $('#palcoJogo').show();
+
+    });
+
+    $('.jogada').click(function(){
+
+        var id_campo_clicado = this.id;
+        jogada(id_campo_clicado);
+    });
+
+    function jogada(id){
+        var icone = '';
+        var ponto = 0;
+    }
+
 });
